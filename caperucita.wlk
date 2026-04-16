@@ -6,7 +6,7 @@ object caperucita {
     }
 
     method pesoCaperucitaConCanasta(){
-        return pesoCaperucita + canasta.pesoDeLaCanasta()
+        return pesoCaperucita += canasta.pesoDeLaCanasta()
     }
         
 }
