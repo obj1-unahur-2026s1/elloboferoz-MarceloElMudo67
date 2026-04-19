@@ -21,11 +21,10 @@ object feroz {
     }
 
     method comer(unPersonaje){
-        self.subirPeso(unPersonaje.peso())
-        
+        self.subirPeso(unPersonaje.peso())        
     }
 
-    method correr(){
+    method correr(unLugar){
         self.bajarPeso(1)
     }
 
@@ -33,12 +32,12 @@ object feroz {
         peso = 10
     }
 
-    method charlar(){
-
+    method charlar(unPersonaje){
+        // a definir
     }
 
-    method personificarse(){
-
+    method personificarse(personaje){
+        // a definir
     }
 
   

@@ -11,14 +11,17 @@ object caperucita {
     method pesoDeLaCanasta(){
         return canasta.cantidadDeManzanas() * manzana.peso()
     }
-    method cruzarElBosquePerdiendoManzanas(cantidad){
+
+    method cruzarElBosquePerdiendoManzanas(unLugar,cantidad){
         self.perderManzana(cantidad)
     }
+
     method perderManzana(cantidad){
         canasta.restarManzanas(cantidad)
     }
-    method preguntarAlLobo(personaje) {
 
+    method preguntarAlLobo(personaje) {
+        // a definir
     }
 }
 
@@ -29,7 +32,7 @@ object abuela {
 object cazador{
     method peso() = 100
 
-    method crisis(personaje){
+    method provocarCrisis(personaje){
         personaje.crisis()
     }
 }
