@@ -1,33 +1,35 @@
+import feroz.*
+import objetos.*
+
+
 object caperucita {
-    const pesoCaperucita = 60
 
-    method pesoCaperucita(){
-        return pesoCaperucita
-    }
-
-    method pesoCaperucitaConCanasta(){
-        return pesoCaperucita += canasta.pesoDeLaCanasta()
-    }
-        
-}
-
-object canasta {
-    var pesoDeLaCanasta = 0
-
-    method cambiarElPesoDeLaCanasta(cantidadDeComida,comida){
-        pesoDeLaCanasta += cantidadDeComida * comida.peso()
-    }
+    method peso() = 60
+    
+    method pesoTotal() = self.peso() + self.pesoDeLaCanasta()   
 
     method pesoDeLaCanasta(){
-        return pesoDeLaCanasta
+        return canasta.cantidadDeManzanas() * manzana.peso()
     }
+    method cruzarElBosquePerdiendoManzanas(cantidad){
+        self.perderManzana(cantidad)
+    }
+    method perderManzana(cantidad){
+        canasta.restarManzanas(cantidad)
+    }
+    method preguntarAlLobo(personaje) {
 
+    }
 }
 
 object abuela {
-    const pesoAbuela = 50
+    method peso() = 50 
+}
 
-    method pesoAbuela(){
-        return pesoAbuela
-    }    
+object cazador{
+    method peso() = 100
+
+    method crisis(personaje){
+        personaje.crisis()
+    }
 }
